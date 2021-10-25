@@ -1,5 +1,5 @@
 # Embedded-Mobile-Systems-and-Business-Models
-
+임베디드 리눅스에 기반한 시스템 빌드로 임베디드 시스템에 대한 기획-설계-구현 과정을 이해
 
 ## Equipment
 - A1004NS 본체
