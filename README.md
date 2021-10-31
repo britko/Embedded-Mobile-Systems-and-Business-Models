@@ -22,6 +22,16 @@
 
 ## How to
 ...
+
+```bash
+# copy this repository
+git clone https://github.com/britko/Embedded-Mobile-Systems-and-Business-Models.git
 ```
-설치방법...
+
+출처:
+https://openwrt.org/docs/guide-developer/toolchain/install-buildsystem#debianubuntu
+https://github.com/openwrt/openwrt
+
+```bash
+bash install_openwrt.sh
 ```
