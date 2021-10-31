@@ -18,11 +18,9 @@
 - OpenWRT 21.02.0
 
 ## OpenWRT
-OpneWRT(OPEN Wireless RouTer) Project는 다양한 임베디드 장치를 위한 Linux 배포판.
-
-패키지 관리 제공
-
-응용 프로그램 선택 및 구성에서 자유로워지며, 응용 프로그램에 밎게 패키지를 사용하여 장치를 사용자 정의할 수 있다.
+- OpneWRT(OPEN Wireless RouTer) Project는 다양한 임베디드 장치를 위한 Linux 배포판.
+- 패키지 관리 제공
+- 응용 프로그램 선택 및 구성에서 자유로워지며, 응용 프로그램에 밎게 패키지를 사용하여 장치를 사용자 정의할 수 있다.
 
 ---
 
