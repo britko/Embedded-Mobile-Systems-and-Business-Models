@@ -13,14 +13,16 @@
 - 설명서 및 보증서
 
 ## Tech
-- VBOX (Optional: WSL2)
+- VBOX(or WSL2)
 - Ubuntu 18.04 LTS
-- OpenWRT 21.02.0
+- OpenWrt 21.02.0
 
-## OpenWRT
-- OpneWRT(OPEN Wireless RouTer) Project는 다양한 임베디드 장치를 위한 Linux 배포판.
+## OpenWrt
+- OpneWrt(OPEN Wireless RouTer) Project는 다양한 임베디드 장치를 위한 Linux 배포판.
 - 패키지 관리 제공
 - 응용 프로그램 선택 및 구성에서 자유로워지며, 응용 프로그램에 밎게 패키지를 사용하여 장치를 사용자 정의할 수 있다.
+- [OpenWrt](https://openwrt.org/)
+- [OpenWrt GitHub](https://github.com/openwrt/openwrt)
 
 ---
 
@@ -29,14 +31,15 @@
 
 2. Install `Ubuntu`
 
-3. Install `OpenWRT` in Ubuntu
+3. Install `OpenWrt` in Ubuntu
+
 ```bash
 # copy this repository
 git clone https://github.com/britko/Embedded-Mobile-Systems-and-Business-Models.git
 ```
 
 ```bash
-# install openWRT 21.02.0
+# install openWrt 21.02.0
 # https://openwrt.org/docs/guide-developer/toolchain/install-buildsystem#debianubuntu
 # https://github.com/openwrt/openwrt
 bash install_openwrt.sh
@@ -48,7 +51,7 @@ make menuconfig
 make
 ```
 
-4. Configuration OpenWRT for Embedded System
+4. Configuration OpenWrt for Embedded System
 
 5. Design & Implement Apllication for Embedded System
 
