@@ -17,11 +17,19 @@
 - Ubuntu 18.04 LTS
 - OpenWRT 21.02.0
 
+## OpenWRT
+OpneWRT(OPEN Wireless RouTer) Project는 다양한 임베디드 장치를 위한 Linux 배포판.
+패키지 관리 제공
+응용 프로그램 선택 및 구성에서 자유로워지며, 응용 프로그램에 밎게 패키지를 사용하여 장치를 사용자 정의할 수 있다.
+
 ---
 
 ## How to
-...
+1. Install `VBOX(or WSL2)`
 
+2. Install `Ubuntu`
+
+3. Install `OpenWRT` in Ubuntu
 ```bash
 # copy this repository
 git clone https://github.com/britko/Embedded-Mobile-Systems-and-Business-Models.git
@@ -39,3 +47,11 @@ make menuconfig
 # To build your firmware. This will download all sources, build the cross-compile toolchain and then cross-compile the GNU/Linux kernel & all chosen applications for your target system.
 make
 ```
+
+4. Configuration OpenWRT for Embedded System
+
+5. Design & Implement Apllication for Embedded System
+
+6. Build
+
+7. Test
