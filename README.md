@@ -3,7 +3,7 @@
 
 ## Equipment
 - A1004NS 본체
-- 본체 받침대
+- A1004NS 받침대
 - GIGA bit LAN Cable
 - 전원 어댑터
 - USB 8G Memory & Cap
@@ -13,10 +13,9 @@
 - 설명서 및 보증서
 
 ## Tech
-- OpenWRT 21.02
-- OpenWRT Snapshot
-- VBOX
-- WSL2
+- VBOX (Optional: WSL2)
+- Ubuntu 18.04 LTS
+- OpenWRT 21.02.0
 
 ---
 
@@ -28,10 +27,15 @@
 git clone https://github.com/britko/Embedded-Mobile-Systems-and-Business-Models.git
 ```
 
-출처:
-https://openwrt.org/docs/guide-developer/toolchain/install-buildsystem#debianubuntu
-https://github.com/openwrt/openwrt
-
 ```bash
+# install openWRT 21.02.0
+# https://openwrt.org/docs/guide-developer/toolchain/install-buildsystem#debianubuntu
+# https://github.com/openwrt/openwrt
 bash install_openwrt.sh
+
+# To select your preferred configuration for the toolchain, target system & firmware packages.
+make menuconfig
+
+# To build your firmware. This will download all sources, build the cross-compile toolchain and then cross-compile the GNU/Linux kernel & all chosen applications for your target system.
+make
 ```
