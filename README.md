@@ -43,13 +43,18 @@ git clone https://github.com/britko/Embedded-Mobile-Systems-and-Business-Models.
 # https://openwrt.org/docs/guide-developer/toolchain/install-buildsystem#debianubuntu
 # https://github.com/openwrt/openwrt
 bash install_openwrt.sh
-
-# To select your preferred configuration for the toolchain, target system & firmware packages.
-make menuconfig
-
-# To build your firmware. This will download all sources, build the cross-compile toolchain and then cross-compile the GNU/Linux kernel & all chosen applications for your target system.
-make
 ```
+
+### To select your preferred configuration for the toolchain, target system & firmware packages.
+1. Copy code (https://downloads.openwrt.org/releases/21.02.0/targets/ramips/mt7620/config.buildinfo)
+2. Run `make menuconfig`
+3. Target Profile -> ipTIME A1004ns
+4. Exit - Yes
+5. Run `make -j5` (현재 CPU보다 1개 더 효율적이라고 한다.)
+
+### To build your firmware. This will download all sources, build the cross-compile toolchain and then cross-compile the GNU/Linux kernel & all chosen applications for your target system.
+make
+
 
 4. Configuration OpenWrt for Embedded System
 
