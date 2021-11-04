@@ -18,7 +18,7 @@ cd openwrt
 sudo apt install binutils bzip2 diff find flex gawk gcc-6+ getopt grep install libc-dev libz-dev \
 make4.1+ perl python3.6+ rsync subversion unzip which
 
-# Setup branch
+# Setup branch (https://openwrt.org/docs/guide-developer/toolchain/use-buildsystem)
 git checkout openwrt-21.02
 git checkout v21.02.0
 ./scripts/feeds update -a
