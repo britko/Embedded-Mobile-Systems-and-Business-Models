@@ -29,9 +29,11 @@
 ## How to
 1. Install `VBOX(or WSL2)`
 
-2. Install `Ubuntu`
+2. Install `Ubuntu 18.04 LTS`
 
-3. Install `OpenWrt` in Ubuntu
+3. Install `OpenWrt 21.02.0` in Ubuntu
+
+4. Change server to kakao
 
 ```bash
 # copy this repository
@@ -47,9 +49,13 @@ bash install_openwrt.sh
 
 ### To select your preferred configuration for the toolchain, target system & firmware packages.
 1. Copy code (https://downloads.openwrt.org/releases/21.02.0/targets/ramips/mt7620/config.buildinfo)
+
 2. Run `make menuconfig`
+
 3. Target Profile -> ipTIME A1004ns
+
 4. Exit - Yes
+
 5. Run `make -j5` (현재 CPU 개수 +1 하면 효율적인 컴파일이 가능하다고 한다.)
 
 ### To build your firmware. This will download all sources, build the cross-compile toolchain and then cross-compile the GNU/Linux kernel & all chosen applications for your target system.
