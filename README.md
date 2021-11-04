@@ -50,13 +50,16 @@ bash install_openwrt.sh
 ### To select your preferred configuration for the toolchain, target system & firmware packages.
 1. Copy code (https://downloads.openwrt.org/releases/21.02.0/targets/ramips/mt7620/config.buildinfo)
 
-2. Run `make menuconfig`
+2. Run `make menuconfig` to configure the firmware image and the kernel
 
 3. Target Profile -> ipTIME A1004ns
 
 4. Exit - Yes
 
-5. Run `make -j5` (현재 CPU 개수 +1 하면 효율적인 컴파일이 가능하다고 한다.)
+5. Run `make -j5 (V=s)` (Never sudo mode!) to build the firmware image
+   - 현재 CPU 개수 +1 하면 효율적인 컴파일이 가능하다고 한다.)
+   - `-j$(nproc)`: 빠른 빌드를 위해 동시에 수행가능한 프로세스의 수를 지정
+   - `V=s`: 빌드를 수행하면서 실행되는 명령어와 스크립트 내용, 빌드 성공여부와 실패시 에러 내용 등의 정보를 화면에 출력하도록 하는 옵션
 
 ### To build your firmware. This will download all sources, build the cross-compile toolchain and then cross-compile the GNU/Linux kernel & all chosen applications for your target system.
 make
