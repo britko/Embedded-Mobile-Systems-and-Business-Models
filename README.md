@@ -13,7 +13,7 @@
 - 설명서 및 보증서
 
 ## Tech
-- VBOX(or WSL2)
+- VBOX(or WSL2) - CPU: 4Core / Memory: 4GB / Storage: 50GB(dynamic allocation)
 - Ubuntu 18.04 LTS
 - OpenWrt 21.02.0
 
