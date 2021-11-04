@@ -50,7 +50,7 @@ bash install_openwrt.sh
 2. Run `make menuconfig`
 3. Target Profile -> ipTIME A1004ns
 4. Exit - Yes
-5. Run `make -j5` (현재 CPU보다 1개 더 효율적이라고 한다.)
+5. Run `make -j5` (현재 CPU 개수 +1 하면 효율적인 컴파일이 가능하다고 한다.)
 
 ### To build your firmware. This will download all sources, build the cross-compile toolchain and then cross-compile the GNU/Linux kernel & all chosen applications for your target system.
 make
