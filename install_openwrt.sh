@@ -20,6 +20,5 @@ make4.1+ perl python3.6+ rsync subversion unzip which
 
 # Setup branch (https://openwrt.org/docs/guide-developer/toolchain/use-buildsystem)
 git checkout openwrt-21.02
-git checkout v21.02.0
 ./scripts/feeds update -a
 ./scripts/feeds install -a
