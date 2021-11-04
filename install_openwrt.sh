@@ -2,7 +2,7 @@
 
 # Build system setup (Debian / Ubuntu)
 # openwrt.org > Documentation > Developer guide > Build system setup
-sudo apt update && sudo apt upgrade -y
+sudo apt update -y && sudo apt upgrade -y
 
 sudo apt install build-essential ccache ecj fastjar file g++ gawk \
 gettext git java-propose-classpath libelf-dev libncurses5-dev \
@@ -12,9 +12,10 @@ swig time xsltproc zlib1g-dev
 
 # Clone OpenWrt GitHub (https://github.com/openwrt/openwrt)
 git clone https://github.com/openwrt/openwrt.git
+cd openwrt
 
 # Requirements
-sudo apt install binutils bzip2 diff find flex gawk gcc-6+ getopt grep install libc-dev libz-dev
+sudo apt install binutils bzip2 diff find flex gawk gcc-6+ getopt grep install libc-dev libz-dev \
 make4.1+ perl python3.6+ rsync subversion unzip which
 
 # Setup branch
