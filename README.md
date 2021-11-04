@@ -55,7 +55,7 @@ bash install_openwrt.sh
 4. Exit - Yes
 
 5. Run `make -j 5 (V=s)` (Never `sudo` mode!) to build the firmware image
-   - make개발자에 의하면 -j (Total Core + 20% of Total Core)하면 가장 효율적인 작업이 가능하다고 한다.
+   - make개발자에 의하면 -j (Total Core + 20% of Total Core)로 실행하면 가장 효율적인 작업이 가능하다고 한다.
    - `-j $(nproc)`: 빠른 빌드를 위해 동시에 수행가능한 프로세스의 수를 지정
    - `V=s`: 빌드를 수행하면서 실행되는 명령어와 스크립트 내용, 빌드 성공여부와 실패시 에러 내용 등의 정보를 화면에 출력하도록 하는 옵션
 
