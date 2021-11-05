@@ -13,7 +13,7 @@
 - 설명서 및 보증서
 
 ## 🎁Tech
-- VBOX(or WSL2) - CPU: 4Core / Memory: 4GB / Storage: 50GB(dynamic allocation)
+- VBOX | VMware | WSL2 - CPU: 4Core / Memory: 4GB / Storage: 50GB(dynamic allocation)
 - Ubuntu 18.04 LTS
 - OpenWrt 21.02.0
 
@@ -63,6 +63,8 @@ sudo vi .config
    - make개발자에 의하면 -j (Total Core + 20% of Total Core)로 실행하면 가장 효율적인 작업이 가능하다고 한다.
    - `-j $(nproc)`: 빠른 빌드를 위해 동시에 수행가능한 프로세스의 수를 지정
    - `V=s`: 빌드를 수행하면서 실행되는 명령어와 스크립트 내용, 빌드 성공여부와 실패시 에러 내용 등의 정보를 화면에 출력하도록 하는 옵션
+
+openwrt/bin/target/ramips/mt7620이 생성됨
 
 ### To build your firmware. This will download all sources, build the cross-compile toolchain and then cross-compile the GNU/Linux kernel & all chosen applications for your target system.
 make
