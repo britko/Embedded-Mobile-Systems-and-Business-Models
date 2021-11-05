@@ -68,6 +68,9 @@ sudo vi .config
 
 ### To build your firmware. This will download all sources, build the cross-compile toolchain and then cross-compile the GNU/Linux kernel & all chosen applications for your target system.
 
+
+
+## TODO
 - Design & Implement Apllication for Embedded System
 
 - Build
