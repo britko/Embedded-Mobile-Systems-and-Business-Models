@@ -67,7 +67,7 @@ sudo vi .config
 6. openwrt/bin/target/ramips/mt7620 is created
 
 ### To build your firmware. This will download all sources, build the cross-compile toolchain and then cross-compile the GNU/Linux kernel & all chosen applications for your target system.
-![실습환경]()
+![실습환경](https://github.com/britko/Embedded-Mobile-Systems-and-Business-Models/blob/master/images/%EC%8B%A4%EC%8A%B5%ED%99%98%EA%B2%BD.png)
 1. 실습 환경을 위 사진과 같이 구성
 
 2. 브라우저를 통해 192.168.1.1로 접속 (ipTIME 관리도구)
