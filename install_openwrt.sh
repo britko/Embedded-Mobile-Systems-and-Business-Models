@@ -4,10 +4,10 @@ echo "Start install OpenWrt"
 
 # Build system setup (Debian / Ubuntu)
 # openwrt.org > Documentation > Developer guide > Build system setup
-sudo apt update -y && sudo apt upgrade -y
+sudo apt-get update -y && sudo apt-get upgrade -y
 
 # Requirements
-sudo apt install build-essential ccache ecj fastjar file g++ gawk \
+sudo apt-get install build-essential ccache ecj fastjar file g++ gawk \
 gettext git java-propose-classpath libelf-dev libncurses5-dev \
 libncursesw5-dev libssl-dev python python2.7-dev python3 unzip wget \
 python3-distutils python3-setuptools python3-dev rsync subversion \
