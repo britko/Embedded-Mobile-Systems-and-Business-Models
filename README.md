@@ -105,7 +105,6 @@ sudo vi .config
 
 9. 브라우저에 `192.168.20.1`로 접속
 
----
 ## OpenWrt on Docker ([docker-openwrt-builder](https://github.com/mwarning/docker-openwrt-builder))
 ### Prerequisites
 - Docker install
@@ -134,7 +133,8 @@ sudo git clone https://git.openwrt.org/openwrt/openwrt.git
 cd openwrt
 sudo ./scripts/feeds update -a
 ./scripts/feeds install -a
-make menuconfig(Target System: MediaTek Ralink MIPS, Subtarget: MT7620 based boards, Target Profile: ipTIME A1004ns, Global build settings - Set build defaults..., luci check)
+make menuconfig
+# Target System: MediaTek Ralink MIPS, Subtarget: MT7620 based boards, Target Profile: ipTIME A1004ns, Global build settings - Set build defaults..., luci check
 make -j4
 ```
 After the build, the images will be inside `~/mybuild/openwrt/bin/target/`
