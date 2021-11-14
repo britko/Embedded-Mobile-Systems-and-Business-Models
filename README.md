@@ -104,6 +104,39 @@ sudo vi .config
    - HOST PC에서 IP 변경 확인
 
 9. 브라우저에 `192.168.20.1`로 접속
+
+## OpenWrt on Docker ([docker-openwrt-builder](https://github.com/mwarning/docker-openwrt-builder))
+### Prerequisites
+- Docker install
+- running Docker daemon
+- build Docker image:
+```bash
+sudo apt-get install docker.io
+sudo dockerd &
+mkdir docker && cd docker
+
+git clone https://github.com/mwarning/docker-openwrt-builder.git
+cd docker-openwrt-builder
+docker build -t openwrt_builder .
+```
+
+### Usage GNU/Linux
+```bash
+# Create a build folder and link it into a new docker container:
+mkdir ~/mybuild
+docker run -v ~/mybuild:/home/user -it openwrt_builder /bin/bash
+```
+
+```bash
+# In the container console, enter:
+sudo git clone https://git.openwrt.org/openwrt/openwrt.git
+cd openwrt
+./scripts/feeds update -a
+./scripts/feeds install -a
+make menuconfig
+make -j4
+```
+
 ## TODO
 - Design & Implement Apllication for Embedded System
 
