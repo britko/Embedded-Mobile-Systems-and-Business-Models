@@ -75,16 +75,17 @@ sudo vi .config
 3. ipTIME을 OpenWrt로 펌웨어 업그레이드
    - 기본 설정 - 펌웨어 업그레이드
    - '수동 업그레이드 실행' 선택
-   - '파일 선택' - [OpenWrt initramfs kernel]()
+   - '파일 선택' - [OpenWrt initramfs kernel](https://github.com/britko/Embedded-Mobile-Systems-and-Business-Models/blob/master/a1004ns_firmware_hjsuh/openwrt-21.02.0-ramips-mt7620-iptime_a1004ns-initramfs-kernel_hjsuh.bin)
    - '수동 업그레이드' 실행
 
 4. 192.168.1.1로 재접속해 OpenWrt 설치 확인
 
 ※기존의 데이터를 백업
+
 - 상단 바 - System - Backup / Flash Firmware - Save mtdblock contents를 모두 다운받는다.
 
 5. A1004NS에 맞는 OpenWrt system으로 Firmware 변경
-   - 'Flash new firmware image' - [OpenWrt squashfs sysupgrade]() - 'Keep settings and...' 해제 - continue
+   - 'Flash new firmware image' - [OpenWrt squashfs sysupgrade](https://github.com/britko/Embedded-Mobile-Systems-and-Business-Models/blob/master/a1004ns_firmware_hjsuh/openwrt-21.02.0-ramips-mt7620-iptime_a1004ns-squashfs-sysupgrade_hjsuh.bin) - 'Keep settings and...' 해제 - continue
 
 6. 무선 활성화(2.4GHz, 5GHz)
    - Network - Wireless - Edit
@@ -101,6 +102,8 @@ sudo vi .config
    - `sync`
    - `reboot`
    - HOST PC에서 IP 변경 확인
+
+9. 브라우저에 `192.168.20.1`로 접속
 ## TODO
 - Design & Implement Apllication for Embedded System
 
