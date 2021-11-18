@@ -157,7 +157,7 @@ reboot
 
 4. Connect to 192.168.20.1 in your browser.
 
-## OpenWrt on x86 ([]())
+## OpenWrt on x86
 ### Virtual Machine configuration
 1. Create a New Virtual Machine 
    - Linux: Other Linux (64-bit)
