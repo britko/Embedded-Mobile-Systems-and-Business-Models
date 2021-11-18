@@ -98,7 +98,7 @@ sudo vi .config
 
 8. IP를 192.168.1.1에서 192.168.20.1로 변경
    - ssh를 통해 A1004NS에 접속 `ssh 192.168.1.1 -l root`
-   - `vi /etc/config/network` - interface option ipaddr '192.168.20.1'로 변경 - 저장하고 종료
+   - `vi /etc/config/network` - interface option ipaddr `192.168.20.1`로 변경 - 저장하고 종료
    - `sync`
    - `reboot`
    - HOST PC에서 IP 변경 확인
@@ -156,6 +156,56 @@ reboot
 ```
 
 4. Connect to 192.168.20.1 in your browser.
+
+## OpenWrt on x86 ([]())
+### Virtual Machine configuration
+1. Create a New Virtual Machine 
+   - Linux: Other Linux (64-bit)
+   - 1 Core, 512 RAM, [openwrt-21.02.0-x86](https://github.com/britko/Embedded-Mobile-Systems-and-Business-Models/blob/master/openwrt-21.02.0-x86-64-generic-ext4-combined.vdi)
+
+2. Set Virtual Machine
+   ```yaml
+   저장소:
+      속성:
+         종류: virtio-scsi
+   네트워크:
+      어댑터 1:
+         다음에 연결됨: 내부 네트워크
+         고급:
+            어댑터 종류: 반가상 네트워크
+      어댑터 2:
+         다음에 연결됨: 어댑터에 브리지
+         고급:
+            어댑터 종류: 반가상 네트워크
+   ```
+
+### OpenWrt configuration
+1. Change lan ip
+   ```bash
+   vi /etc/config/network
+
+   # Change ipaddr
+   config interface 'lan'
+          ...
+          option ipaddr '192.168.21.1'
+          ...
+   ```
+`vi /etc/config/network` - interface 'lan' option ipaddr `192.168.21.1`로 변경 - `:wq`저장하고 종료
+
+2. luci 활성화를 위해 주석 제거
+   ```bash
+   vi /etc/config/firewall
+
+   # Remove annotation & Change dest_ip
+   # port redirect port coming in on wan to lan
+   config redirect
+          option src                wan
+          option src_dport    80
+          option dest               lan
+          option dest_ip      192.168.21.1
+          option dest_port    80
+          option proto        tcp
+   ```
 
 ## TODO
 - Design & Implement Apllication for Embedded System
