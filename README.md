@@ -212,6 +212,36 @@ reboot
 
 3. Connect to {VM_ip} in your browser.
 
+## OpenWrt on x86 Docker Build
+### 
+```bash
+mkdir mybuild2
+sudo -s
+doekr run -v ~/mybuild2:/home/user -it openwrt_builder /bin/bash
+git clone https://git.openwrt.org/openwrt/openwrt.git
+
+git fetch --tags
+git tag -l
+
+git checkout v${version}
+
+./scripts/feeds update -a
+./scripts/feeds install -a
+make menuconfig
+```
+
+```yaml
+# OpenWrt Configuration
+target System: x86
+Subtartget: x86_64
+Target Profile: Generic
+Global build settings: [*]Set build defaults...
+LuCI:
+   1. Collections: <*>luci
+```
+- Exit
+- `make -j $(nproc)`
+
 ## TODO
 - Design & Implement Apllication for Embedded System
 
