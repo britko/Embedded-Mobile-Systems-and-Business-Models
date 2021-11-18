@@ -142,6 +142,21 @@ After the build, the images will be inside `~/mybuild/openwrt/bin/target/`
 ### but
 - 소프트웨어를 OpenWrt에 설치하는데 커널, 라이브러리에서 의존성 문제가 발생할 가능성이 있고, 그 때마다 이를 해결하기 위해 새로 빌드하는데는 시간이 너무 오래 걸리기 때문에 미리 빌드된 [Development Snapshot builds](https://downloads.openwrt.org/snapshots/targets/ramips/mt7620/)를 사용해 빠르게 작업을 진행할 수 있다.
 
+1. Download iptime_a1004ns-squashfs-systpgrade.bin
+
+2. OpenWrt Firmware upgrade
+
+3. Because luci is disenable, it cannot be accessed through a browser.
+```bash
+ssh 192.168.20.1 -l root
+opkg update
+opkg install luci
+sync
+reboot
+```
+
+4. Connect to 192.168.20.1 in your browser.
+
 ## TODO
 - Design & Implement Apllication for Embedded System
 
