@@ -205,7 +205,12 @@ reboot
           option dest_ip      192.168.21.1
           option dest_port    80
           option proto        tcp
+
+   sync
+   reboot
    ```
+
+3. Connect to {VM_ip} in your browser.
 
 ## TODO
 - Design & Implement Apllication for Embedded System
