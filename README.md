@@ -242,6 +242,38 @@ LuCI:
 - Exit
 - `make -j $(nproc)`
 
+## OpenWrt MP3 Player
+
+### Plugin Hadware
+- USB 8G Memory & Cap
+- USB AUDIO
+- USB HUB
+### Add Software ([OpenWrt Docs: USB audio support](https://openwrt.org/docs/guide-user/hardware/audio/usb.audio))
+OpenWrt - System - Software
+- Software for mp3 paly
+   - kmod-usb-audio
+   - kmod-sound-core
+   - alsa-utils
+   - usbutils
+   - madplay
+   - mpd
+- Software for USB
+   - kmod-usb-storage
+   - kmod-fs-vfat
+### ddd
+SSH로 A1004NS에 접속 `ssh 192.168.20.1 -l root`
+```bash
+cd /mnt
+mkdir USB
+
+# USB Memory에 mount
+mount -t vfat /dev/sda1 /mnt/USB
+
+cd USB/mp3
+
+# MP3 파일을 재생
+madplay ${MP3 file}
+```
 ## TODO
 - Design & Implement Apllication for Embedded System
 
