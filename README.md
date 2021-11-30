@@ -164,7 +164,7 @@ reboot
    - 1 Core, 512 RAM, [openwrt-21.02.0-x86](https://github.com/britko/Embedded-Mobile-Systems-and-Business-Models/blob/master/openwrt-21.02.0-x86-64-generic-ext4-combined.vdi)
 
 2. Set Virtual Machine
-   ```yaml
+   ```yml
    저장소:
       속성:
          종류: virtio-scsi
@@ -230,7 +230,7 @@ git checkout v${version}
 make menuconfig
 ```
 
-```yaml
+```yml
 # OpenWrt Configuration
 target System: x86
 Subtartget: x86_64
@@ -260,9 +260,12 @@ OpenWrt - System - Software
 - Software for USB
    - kmod-usb-storage
    - kmod-fs-vfat
-### ddd
+### Run MP3 Player
 SSH로 A1004NS에 접속 `ssh 192.168.20.1 -l root`
 ```bash
+# 패키지 소프트웨어 업데이트
+opkg update
+
 cd /mnt
 mkdir USB
 
@@ -274,6 +277,32 @@ cd USB/mp3
 # MP3 파일을 재생
 madplay ${MP3 file}
 ```
+
+### SMB_FileShare
+OpenWrt - System - Software
+- luci-app-ksmbd
+Logout -> Login
+Services - Network Shares
+```yml
+Shared Directories(Add):
+  Name: mp3
+  Path: /mnt/USB/mp3
+```
+- Save & Apply
+- 네트워크 공유폴더 `\\192.168.x.x`
+
+### Shairplay
+OpenWrt - System - Software
+- luci-app-shairplay
+Services - Shairplay
+```yml
+MAIN:
+  Enabled: check
+  Respawn: check
+  ...
+  AO Device ID: 0
+```
+
 ## TODO
 - Design & Implement Apllication for Embedded System
 
