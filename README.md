@@ -33,6 +33,8 @@
 
 4. Change server to kakao
 
+5. install `OpenWrt`
+
 ```bash
 # copy this repository
 git clone https://github.com/britko/Embedded-Mobile-Systems-and-Business-Models.git
