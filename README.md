@@ -50,10 +50,10 @@ bash install_openwrt.sh
 
 ### To select your preferred configuration for the toolchain, target system & firmware packages.
 1. Copy & Paste code [.config](https://downloads.openwrt.org/releases/21.02.0/targets/ramips/mt7620/config.buildinfo)
-```bash
-cd openwrt
-sudo vi .config
-```
+   ```bash
+   cd openwrt
+   sudo vi .config
+   ```
 
 2. Run `make menuconfig` to configure the firmware image and the kernel
 
@@ -82,7 +82,7 @@ sudo vi .config
 
 4. 192.168.1.1로 재접속해 OpenWrt 설치 확인
 
-※기존의 데이터를 백업
+   ※기존의 데이터를 백업
 
 - 상단 바 - System - Backup / Flash Firmware - Save mtdblock contents를 모두 다운받는다.
 
@@ -112,15 +112,15 @@ sudo vi .config
 - Docker install
 - running Docker daemon
 - build Docker image:
-```bash
-sudo apt-get install docker.io
-sudo dockerd &
-mkdir docker && cd docker
+   ```bash
+   sudo apt-get install docker.io
+   sudo dockerd &
+   mkdir docker && cd docker
 
-git clone https://github.com/mwarning/docker-openwrt-builder.git
-cd docker-openwrt-builder
-docker build -t openwrt_builder .
-```
+   git clone https://github.com/mwarning/docker-openwrt-builder.git
+   cd docker-openwrt-builder
+   docker build -t openwrt_builder .
+   ```
 
 ### Usage GNU/Linux
 ```bash
@@ -149,13 +149,13 @@ After the build, the images will be inside `~/mybuild/openwrt/bin/target/`
 2. OpenWrt Firmware upgrade
 
 3. Because luci is disenable, it cannot be accessed through a browser.
-```bash
-ssh 192.168.20.1 -l root
-opkg update
-opkg install luci
-sync
-reboot
-```
+   ```bash
+   ssh 192.168.20.1 -l root
+   opkg update
+   opkg install luci
+   sync
+   reboot
+   ```
 
 4. Connect to 192.168.20.1 in your browser.
 
@@ -192,7 +192,7 @@ reboot
           option ipaddr '192.168.21.1'
           ...
    ```
-`vi /etc/config/network` - interface 'lan' option ipaddr `192.168.21.1`로 변경 - `:wq`저장하고 종료
+   `vi /etc/config/network` - interface 'lan' option ipaddr `192.168.21.1`로 변경 - `:wq`저장하고 종료
 
 2. luci 활성화를 위해 주석 제거
    ```bash
@@ -285,11 +285,11 @@ OpenWrt - System - Software
 - luci-app-ksmbd
 Logout -> Login
 Services - Network Shares
-```yml
-Shared Directories(Add):
-  Name: mp3
-  Path: /mnt/USB/mp3
-```
+   ```yml
+   Shared Directories(Add):
+   Name: mp3
+   Path: /mnt/USB/mp3
+   ```
 - Save & Apply
 - 네트워크 공유폴더 `\\192.168.x.x`
 
@@ -297,13 +297,13 @@ Shared Directories(Add):
 OpenWrt - System - Software
 - luci-app-shairplay
 Services - Shairplay
-```yml
-MAIN:
-  Enabled: check
-  Respawn: check
-  ...
-  AO Device ID: 0
-```
+   ```yml
+   MAIN:
+   Enabled: check
+   Respawn: check
+   ...
+   AO Device ID: 0
+   ```
 
 ## TODO
 - Design & Implement Apllication for Embedded System
